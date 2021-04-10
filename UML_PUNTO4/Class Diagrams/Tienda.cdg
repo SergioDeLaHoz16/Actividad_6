@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Tienda">
+  <ClassDiagramComponents>
+    <Class name="Caracteristica" package="" visibility="public" xPosition="415.0" yPosition="166.0">
+      <Fields>
+        <Field name="code" type="int" visibility="private"/>
+        <Field name="precio" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getCode" returnType="int" visibility="public"/>
+        <Method name="getPrecio" returnType="int" visibility="public"/>
+        <Method name="setCode" returnType="int" visibility="public">
+          <Argument type="int" name="Code"/>
+        </Method>
+        <Method name="setPrecio" returnType="int" visibility="public">
+          <Argument type="int" name="Precio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Portatil" package="" visibility="public" xPosition="184.0" yPosition="406.0">
+      <Fields>
+        <Field name="peso" type="int" visibility="private"/>
+        <Field name="eslogan" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getPeso" returnType="int" visibility="public"/>
+        <Method name="getEslogan" returnType="String" visibility="public"/>
+        <Method name="setPeso" returnType="int" visibility="public">
+          <Argument type="int" name="Peso"/>
+        </Method>
+        <Method name="setEslogan" returnType="String" visibility="public">
+          <Argument type="String" name="Eslogan"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PcMesa" package="" visibility="public" xPosition="613.0" yPosition="424.0">
+      <Fields>
+        <Field name="descripcion" type="String" visibility="private"/>
+        <Field name="eslogan" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getDescripcion" returnType="String" visibility="public"/>
+        <Method name="getEslogan" returnType="String" visibility="public"/>
+        <Method name="setEslogan" returnType="String" visibility="public">
+          <Argument type="String" name="Eslogan"/>
+        </Method>
+        <Method name="setDescripcion" returnType="String" visibility="public">
+          <Argument type="String" name="Descripcion"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Tienda" package="" visibility="public" xPosition="95.0" yPosition="143.0">
+      <Fields>
+        <Field name="caracteristica" type="Caracteristica" visibility="private"/>
+        <Field name="portatil" type="Portatil" visibility="private"/>
+        <Field name="PcMesa" type="PcMesa" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Portatil" returnType="void" visibility="public"/>
+        <Method name="Caracteristica" returnType="void" visibility="public"/>
+        <Method name="PcMesa" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Contenido" source="Caracteristica" target="Tienda" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="Hereda de" source="Portatil" target="Caracteristica"/>
+    <IsRelation name="Hereda de" source="PcMesa" target="Caracteristica"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
